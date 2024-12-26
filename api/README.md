@@ -1,5 +1,11 @@
 # Backend
 
+## Prerequisites
+
+Ensure the following are installed on your system:
+
+- **Python** (Recommended version: 3.11)
+
 ## Install Dependencies
 
 1. Install dependencies:
@@ -17,6 +23,6 @@ python manage.py migrate
 ## Run the Django Server
 
 1. Start the development server:
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+python manage.py runserver
+```
