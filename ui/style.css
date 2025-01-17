@@ -1,0 +1,13 @@
+.btn-custom {
+  background: linear-gradient(#ffbf00, #f2a50c);
+}
+.btn-custom:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+.btn-custom-danger {
+  background: linear-gradient(#ff4c4c, #ff1a1a);
+}
+
+.btn-custom-danger:hover {
+  background: linear-gradient(#ff6666, #ff3333);
+}
