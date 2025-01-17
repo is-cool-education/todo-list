@@ -10,10 +10,9 @@ from users import models, serializers
 class UserViewSet(viewsets.ModelViewSet):
     queryset = models.User.objects.all()
     serializer_class = serializers.UserSerializer
-    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return super().get_queryset().filter(username=self.request.user)
+        return super().get_queryset().filter(username=self.request.user.username)
 
     @action(detail=False, methods=['get'])
     def me(self, request):

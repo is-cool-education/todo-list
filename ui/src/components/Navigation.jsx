@@ -13,9 +13,26 @@ function Navigation() {
   };
 
   return (
-    <nav>
-      <h1>To-do List</h1>
-      <button onClick={handleLogout}>Log out</button>
+    <nav className="navbar">
+      <div className="container-fluid">
+        <Link to="/" className="text-decoration-none text-white fs-1">
+          To-do List
+        </Link>
+        {currentUser ? (
+          <div className="d-flex gap-2">
+            <Link to="/task-show" className="btn btn-custom fw-bold">
+              Criar tarefa
+            </Link>
+            <button onClick={handleLogout} className="btn btn-custom fw-bold">
+              Log out
+            </button>
+          </div>
+        ) : (
+          <Link to="/sign-in" className="btn btn-custom fw-bold">
+            Log in
+          </Link>
+        )}
+      </div>
     </nav>
   );
 }
